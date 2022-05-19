@@ -19,15 +19,15 @@ class JogadorModel {
     required this.ataquesacertados,
   });
 
-  factory JogadorModel.fromMap(Map<String, dynamic> json) {
+  factory JogadorModel.fromMap(Map<String, dynamic> jogador) {
     return JogadorModel(
-      nome: json['nome'],
-      saques: json['saques'],
-      bloqueios: json['bloqueios'],
-      ataques: json['ataques'],
-      saquesacertados: json['saquesacertados'],
-      bloqueiosacertados: json['bloqueiosacertados'],
-      ataquesacertados: json['ataquesacertados'],
+      nome: jogador['nome'],
+      saques: jogador['saques'],
+      bloqueios: jogador['bloqueios'],
+      ataques: jogador['ataques'],
+      saquesacertados: jogador['saquesacertados'],
+      bloqueiosacertados: jogador['bloqueiosacertados'],
+      ataquesacertados: jogador['ataquesacertados'],
     );
   }
 
@@ -118,6 +118,9 @@ void main() {
       print("Bloqueio: ${bloqAcertoTotal}/${bloqTotal} ou seja (${bloqporcent.toStringAsFixed(2)}%)");
       print("Ataque: ${ataqAcertoTotal}/${ataqTotal} ou seja (${ataqporcent.toStringAsFixed(2)}%)");
 
+    } else if (selecionado.toString() == 'sair' || selecionado == 'Sair' || selecionado == 'SAIR') {
+      print("\n----------Finalizado----------\n");
+      sair = true;
     } else {
       print("\n----------OPÇÃO INVÁLIDA----------\n");
     }
