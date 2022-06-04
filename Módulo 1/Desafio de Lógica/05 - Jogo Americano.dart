@@ -2,8 +2,36 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:convert';
 
+// Amanda 2 Sabrina 1 Samanta 1 Carina 2 Beatriz 3
+
 void solucao(List jogadores) {
-  print(jogadores);
+  int total = 0;
+  String selecionado = "";
+  List numeros = jogadores.map((jogador) => jogador['numero']).toList();
+  List nomes = jogadores.map((jogador) => jogador['nome']).toList();
+
+  for (int i = 0; i < numeros.length; i++) {
+
+    total += int.parse(numeros[i].toString());
+  }
+
+  if (total <= nomes.length) {
+    for (int i = 0; i < total; i++) {
+      selecionado = nomes[i];
+    }
+  } else {
+    final int resto = total % nomes.length;
+    for (int i = 0; i < nomes.length; i++) {
+      selecionado = nomes[i];
+    }
+    for (int i = 0; i < resto; i++) {
+      selecionado = nomes[i];
+    }
+
+  }
+
+  print("Resultado: $total");
+  print("Goleiro(a): $selecionado");
 }
 
 void main() {
