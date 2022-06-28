@@ -12,4 +12,4 @@ void main() {
   final totalPagar = parcelasTotal * valorParcela;
   print("Total a Pagar: R\$ ${totalPagar.toStringAsFixed(2)}");
   print("Saldo Devedor: R\$ $saldoDevedor");
-}
+} //108
