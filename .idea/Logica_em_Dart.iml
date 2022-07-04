@@ -24,6 +24,9 @@
       <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_layout/build" />
       <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_layout/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_layout/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_trabalhando_com_abas/tab_fixa/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_trabalhando_com_abas/tab_fixa/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_trabalhando_com_abas/tab_fixa/.pub" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

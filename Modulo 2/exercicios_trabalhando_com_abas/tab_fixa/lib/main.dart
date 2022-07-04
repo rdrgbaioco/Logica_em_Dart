@@ -1,52 +1,88 @@
 import 'package:flutter/material.dart';
 import 'package:tab_fixa/resources/pets_list.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyFixedTab());
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+class MyFixedTab extends StatelessWidget {
+  const MyFixedTab({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
+
+    String link = "https://camo.githubusercontent.com/4b783104cc582931f87054bdaa2d0f9353d5a210ef7f772420928c1501f54f22/68747470733a2f2f692e696d6775722e636f6d2f654641723551582e706e67";
+
     return MaterialApp(
-      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-
-  @override
-  Widget build(BuildContext context) {
-    return TabBarView(
-
-      children: [
-        Center(
-          child: Text(Pets.dog.toUpperCase()),
+      home: DefaultTabController(
+        length: 3,
+        child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.indigo[300],
+            leading: ClipRRect(
+              borderRadius: BorderRadius.circular(20),
+              child: Image.network(link)
+            ),
+            title: const Text('Meu Pet: A loja do seu pet'),
+            bottom: const TabBar(
+              isScrollable: true,
+              indicatorColor: Colors.pink,
+              physics: BouncingScrollPhysics(),
+              tabs: <Widget>[
+                Tab(
+                  child: Text('CATIOROS',
+                    style: TextStyle(
+                      fontSize: 16
+                    ),
+                  ),
+                ),
+                Tab(
+                  child: Text('GATINEOS',
+                    style: TextStyle(
+                        fontSize: 16
+                    ),
+                  ),
+                ),
+                Tab(
+                  child: Text('PASSARINEOS',
+                    style: TextStyle(
+                        fontSize: 16
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          body: const TabBarView(
+            physics: BouncingScrollPhysics(),
+            children: <Widget>[
+              Center(
+                child: Text('CATIOROS',
+                  style: TextStyle(
+                      fontSize: 22
+                  ),
+                ),
+              ),
+              Center(
+                child: Text('GATINEOS',
+                  style: TextStyle(
+                      fontSize: 22
+                  ),
+                ),
+              ),
+              Center(
+                child: Text('PASSARINEOS',
+                  style: TextStyle(
+                      fontSize: 22
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
-        Center(
-          child: Text(Pets.cat.toUpperCase()),
-        ),
-        Center(
-          child: Text(Pets.bird.toUpperCase()),
-        ),
-      ]
-    );
+      ),
+      );
   }
 }
