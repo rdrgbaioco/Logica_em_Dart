@@ -10,40 +10,94 @@ class CatiorosList extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: DefaultTabController(
-        length: 3,
+        length: 11,
         child: Scaffold(
           appBar: AppBar(
-            backgroundColor: Colors.indigo[300],
-            // leading: ClipRRect(
-            //     borderRadius: BorderRadius.circular(20),
-            //     child: Image.network(link)
-            // ),
-            title: const Text('Meu Pet: A loja do seu pet'),
+            backgroundColor: Colors.purpleAccent[700],
+            centerTitle: true,
+            title: const Text('Catioros'),
             bottom: const TabBar(
               isScrollable: true,
               indicatorColor: Colors.pink,
               physics: BouncingScrollPhysics(),
               tabs: <Widget>[
                 Tab(
-                  child: Text('CATIOROS',
+                  child: Text('Dachshund',
                     style: TextStyle(
                         fontSize: 16
                     ),
                   ),
                 ),
                 Tab(
-                  child: Text('GATINEOS',
+                  child: Text('Golden',
                     style: TextStyle(
                         fontSize: 16
                     ),
                   ),
                 ),
                 Tab(
-                  child: Text('PASSARINEOS',
+                  child: Text('Bulldog',
+                    style: TextStyle(
+                        fontSize: 16
+                    ),
+                  ),
+                ),
+                Tab(
+                  child: Text('Pug',
+                    style: TextStyle(
+                        fontSize: 16
+                    ),
+                  ),
+                ),
+                Tab(
+                  child: Text('Spaniel',
+                    style: TextStyle(
+                        fontSize: 16
+                    ),
+                  ),
+                ),
+                Tab(
+                  child: Text('Husky',
+                    style: TextStyle(
+                        fontSize: 16
+                    ),
+                  ),
+                ),
+                Tab(
+                  child: Text('Border Collie',
+                    style: TextStyle(
+                        fontSize: 16
+                    ),
+                  ),
+                ),
+                Tab(
+                  child: Text('Beagle',
+                    style: TextStyle(
+                        fontSize: 16
+                    ),
+                  ),
+                ),
+                Tab(
+                  child: Text('Weimaraner',
+                    style: TextStyle(
+                        fontSize: 16
+                    ),
+                  ),
+                ),
+                Tab(
+                  child: Text('Dalmata',
+                    style: TextStyle(
+                        fontSize: 16
+                    ),
+                  ),
+                ),
+                Tab(
+                  child: Text('Atentado',
                     style: TextStyle(
                         fontSize: 16
                     ),
@@ -52,33 +106,79 @@ class CatiorosList extends StatelessWidget {
               ],
             ),
           ),
-          body: const TabBarView(
-            physics: BouncingScrollPhysics(),
+          body: TabBarView(
+            physics: const BouncingScrollPhysics(),
             children: <Widget>[
-              Center(
-                child: Text('CATIOROS',
-                  style: TextStyle(
-                      fontSize: 22
-                  ),
-                ),
+              customCard(
+                  name: 'Dachshund',
+                  link: 'assets/images/Dachshund.png'
               ),
-              Center(
-                child: Text('GATINEOS',
-                  style: TextStyle(
-                      fontSize: 22
-                  ),
-                ),
+              customCard(
+                  name: 'Golden',
+                  link: 'assets/images/Golden.png'
               ),
-              Center(
-                child: Text('PASSARINEOS',
-                  style: TextStyle(
-                      fontSize: 22
-                  ),
-                ),
+              customCard(
+                  name: 'Bulldog',
+                  link: 'assets/images/Bulldog.png'
+              ),
+              customCard(
+                  name: 'Pug',
+                  link: 'assets/images/Pug.png'
+              ),
+              customCard(
+                  name: 'Spaniel',
+                  link: 'assets/images/Spaniel.png'
+              ),
+              customCard(
+                  name: 'Husky',
+                  link: 'assets/images/Husky.png'
+              ),
+              customCard(
+                  name: 'Border Collie',
+                  link: 'assets/images/Border_Collie.png'
+              ),
+              customCard(
+                  name: 'Beagle',
+                  link: 'assets/images/Beagle.png'
+              ),
+              customCard(
+                  name: 'Weimaraner',
+                  link: 'assets/images/Weimaraner.png'
+              ),
+              customCard(
+                  name: 'Dalmata',
+                  link: 'assets/images/Dalmata.png'
+              ),
+              customCard(
+                  name: 'Atentado',
+                  link: 'assets/images/Atentado.png'
               ),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget customCard({required String name, required String link}) {
+    return Padding(
+      padding: const EdgeInsets.only(left: 10, right: 10),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text(
+            name,
+            style: const TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const Padding(padding: EdgeInsets.only(top: 10)),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Image.asset(link)
+          ),
+        ],
       ),
     );
   }
