@@ -1,0 +1,4 @@
+#Tue Jul 19 21:32:41 AMT 2022
+base.0=C\:\\Users\\Rodrigo\\AndroidStudioProjects\\Logica_em_Dart\\Modulo 2\\exercicios_bloc\\pokemon_dex\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

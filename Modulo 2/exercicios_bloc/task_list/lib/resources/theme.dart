@@ -6,24 +6,30 @@ class MyTasksTheme {
   static final light = ThemeData(
     useMaterial3: true,
     textTheme: GoogleFonts.rubikTextTheme(),
-    scaffoldBackgroundColor: ColorsTheme.secondary,
+    scaffoldBackgroundColor: ColorsTheme.background,
     colorScheme: ColorScheme.fromSeed(
       brightness: Brightness.light,
       seedColor: ColorsTheme.primary,
       background: ColorsTheme.background,
       primary: ColorsTheme.primary,
-      onPrimary: Colors.black54,
-      secondary: Colors.purpleAccent,
+      onPrimary: ColorsTheme.tertiary,
+      secondary: ColorsTheme.secondary,
+      onSecondary: ColorsTheme.tertiary,
     ),
     appBarTheme: const AppBarTheme(
-      color: Colors.white70,
+      color: ColorsTheme.secondary,
       elevation: 0,
-      iconTheme: IconThemeData(color: Colors.purpleAccent),
+      titleTextStyle: TextStyle(
+        color: ColorsTheme.title,
+        fontSize: 24,
+        fontWeight: FontWeight.w600,
+      ),
+      iconTheme: IconThemeData(color: ColorsTheme.primary,),
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        primary: Colors.purpleAccent,
-        onPrimary: Colors.white,
+        primary: ColorsTheme.primary,
+        onPrimary: ColorsTheme.secondary,
       ),
     ),
   );
