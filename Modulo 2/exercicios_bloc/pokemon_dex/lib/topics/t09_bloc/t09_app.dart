@@ -30,8 +30,7 @@ class PokemonApp extends StatelessWidget {
               theme: PokemonTheme.light,
               darkTheme: PokemonTheme.dark,
               home: BlocProvider(
-                create: (context) =>
-                    PokemonBloc(pokemonRepository)..add(PokemonLoaded()),
+                create: (context) => PokemonBloc(pokemonRepository)..add(PokemonLoaded()),
                 child: const PokemonHome(),
               ),
             );

@@ -8,12 +8,13 @@ import 'package:pokemon/repositories/pokemon_repository.dart';
 import 'package:pokemon/resources/strings.dart';
 
 class PokemonBloc extends Bloc<PokemonEvent, PokemonState> {
+  final PokemonRepository _pokemonRepository;
+
   PokemonBloc(this._pokemonRepository) : super(
       const PokemonState(status: PokemonStatus.initial, page: 0, pokemons: [],)) {
-          on<PokemonLoaded>(_onPokemonLoaded);
-  }
+        on<PokemonLoaded>(_onPokemonLoaded);
+          }
 
-  final PokemonRepository _pokemonRepository;
 
   void _onPokemonLoaded(PokemonLoaded event, Emitter<PokemonState> emit) async {
     
