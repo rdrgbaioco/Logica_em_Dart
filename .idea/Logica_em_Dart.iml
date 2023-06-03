@@ -27,6 +27,18 @@
       <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_trabalhando_com_abas/tab_fixa/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_trabalhando_com_abas/tab_fixa/build" />
       <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_trabalhando_com_abas/tab_fixa/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_trabalhando_com_abas/catioros_list/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_trabalhando_com_abas/catioros_list/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_trabalhando_com_abas/catioros_list/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_bloc/task_list/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_bloc/task_list/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_bloc/task_list/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_bloc/my_cep/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_bloc/my_cep/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_bloc/my_cep/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_bloc/pokemon_dex/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_bloc/pokemon_dex/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Modulo 2/exercicios_bloc/pokemon_dex/.pub" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
